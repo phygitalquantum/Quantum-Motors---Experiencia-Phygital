@@ -1,222 +1,177 @@
-# Quantum Motors - Experiencia Phygital
+[README.md](https://github.com/user-attachments/files/24226905/README.md)
+# Quantum Motors - Experiencia Phygital Interactiva 🚗⚡
 
-Una experiencia digital inmersiva para mostroom físico de vehículos eléctricos Quantum Motors.
+Interfaz táctil estilo tablet para showroom con interacciones como menú de restaurante digital.
 
-## 🚗 Características
+## ✨ NUEVO: Interactividad Tipo Tablet
 
-### Catálogo Interactivo
-- Exploración de modelos E4, Nexus y Kaiyi
-- Filtros por categoría (Sedán, SUV, Compacto)
-- Especificaciones técnicas detalladas
-- Precios y comparativas
+### 🎯 Características Interactivas
+- **Cards táctiles** con animaciones (como menú de comida)
+- **Wizard paso a paso** para calculadora
+- **Feedback visual** inmediato en cada toque
+- **Vibración háptica** en dispositivos compatibles
+- **Transiciones suaves** con efectos bounce
 
-### Calculadora de Ahorro
-- Compara tu vehículo actual con modelos Quantum
-- Calcula ahorro mensual y anual en combustible
-- Incluye costos de mantenimiento
-- Proyecciones a 5 años
+## 💰 Precios en Bolivianos (Bs)
 
-### Personalizador de Vehículos
-- Selección de modelo (E4, Nexus, Kaiyi)
-- 6 colores disponibles
-- Accesorios premium:
-  - Techo panorámico
-  - Asientos de cuero premium
-  - Sistema de sonido premium
-  - Piloto automático avanzado
-- Cotización en tiempo real
+| Modelo | Precio Base | Equivalente USD |
+|--------|-------------|-----------------|
+| **E4** | Bs 197,100 | ≈ $28,500 |
+| **Nexus** | Bs 296,360 | ≈ $42,800 |
+| **Kaiyi** | Bs 158,530 | ≈ $22,900 |
 
-### Historia de la Marca
-- Timeline interactivo desde 2015 hasta 2025
-- Misión, Visión y Valores
-- Hitos importantes de la compañía
+### Costos de Combustible
+- ⛽ **Gasolina**: Bs 6.96 / litro
+- 🔌 **Electricidad**: Bs 0.88 / kWh
 
-### Formulario de Contacto
-- Agenda tu test drive
-- Información de contacto
-- Horarios y ubicación
+## 🎮 Módulos Interactivos
 
-## 🎨 Diseño
+### 1️⃣ Catálogo Táctil
+- Cards grandes con hover effect
+- Filtros animados con emojis (🌟 🚗 🚙 🚕)
+- Link directo a: https://tuquantum.com/catalogo-vehiculos/
+- Indicador "Toca para ver detalles"
 
-- **Colores Corporativos**: Verde Quantum (#00C896) y tonos elegantes
-- **Tipografía**: Montserrat para cuerpo, Playfair Display para títulos
-- **Estilo**: Profesional, moderno y elegante
-- **Responsive**: Adaptado para pantallas grandes (Android tablets/displays)
+### 2️⃣ Calculadora Wizard
+**Paso 1**: Selecciona tu vehículo actual
+- 6 opciones con consumo visible
+- Cards grandes tipo menú
 
-## 🚀 Despliegue en GitHub Pages
+**Paso 2**: Elige tu Quantum
+- Badges: Más Vendido, Premium, Nuevo
+- Specs en cada card
 
-### Opción 1: Subir directamente
+**Paso 3**: ¿Cuánto conduces?
+- Slider grande interactivo
+- Botones rápidos: 1000, 1500, 2000, 2500 km
+- Display prominente de kilómetros
 
-1. Crea un nuevo repositorio en GitHub
-2. Sube los archivos:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-   - `README.md`
+**Resultados Animados**:
+- Ahorro mensual/anual en Bs
+- Proyección 5 años
+- Incluye mantenimiento
 
-3. Ve a Settings → Pages
-4. En "Source", selecciona la rama `main` y carpeta `/ (root)`
-5. Guarda y espera unos minutos
-6. Tu sitio estará disponible en: `https://[tu-usuario].github.io/[nombre-repo]/`
+### 3️⃣ Personalizador 3D
+- Paleta de 6 colores táctil
+- 4 accesorios premium
+- Precio en tiempo real
+- Botones de rotación
 
-### Opción 2: Usando Git
+## 🚀 Deploy a GitHub Pages
 
 ```bash
-# Inicializa el repositorio
 git init
-
-# Añade los archivos
 git add .
-
-# Crea el commit inicial
-git commit -m "Initial commit: Quantum Motors Phygital Experience"
-
-# Conecta con tu repositorio remoto
-git remote add origin https://github.com/[tu-usuario]/[nombre-repo].git
-
-# Sube los cambios
-git branch -M main
+git commit -m "Quantum Interactive Experience"
+git remote add origin https://github.com/[usuario]/[repo].git
 git push -u origin main
 ```
 
-Luego activa GitHub Pages desde la configuración del repositorio.
+Luego: Settings → Pages → Source: main
 
-### Opción 3: Importar desde otra fuente
+## 📱 Configuración para Tablet Android
 
-Si ya tienes el proyecto en otro lugar:
+### Apps Recomendadas
+- **Fully Kiosk Browser** ⭐ (recomendado)
+- Kiosk Browser Lockdown
+- SureLock
 
-```bash
-git clone https://github.com/[tu-usuario]/[nombre-repo-existente].git
-cd [nombre-repo-existente]
-
-# Copia los nuevos archivos aquí
-
-git add .
-git commit -m "Update: New Quantum Phygital Experience"
-git push
+### Configuración Óptima
+```
+URL: tu-github-pages-url
+Modo: Pantalla completa
+Orientación: Landscape
+Auto-reload: 12 horas
+Brillo: 100%
 ```
 
-## 📱 Configuración para Pantalla Android
+### Hardware Recomendado
+- Tablet 10-13"
+- Full HD (1920x1080+)
+- 4GB RAM
+- Android 8.0+
 
-### Modo Kiosk Recomendado
-
-Para usar en showroom con tablet/pantalla Android:
-
-1. **Instalación de navegador en modo kiosk:**
-   - Kiosk Browser Lockdown
-   - Fully Kiosk Browser
-   - SureLock
-
-2. **Configuración:**
-   - URL de inicio: Tu GitHub Pages URL
-   - Deshabilitar botones de navegación
-   - Habilitar modo pantalla completa
-   - Configurar auto-refresh cada 12 horas
-   - Prevenir salir de la aplicación
-
-3. **Optimizaciones:**
-   - Orientación: Horizontal/Vertical según pantalla
-   - Brillo automático deshabilitado (100%)
-   - Timeout de pantalla: Nunca
-
-## 🔧 Personalización
+## 🎨 Personalización Rápida
 
 ### Cambiar Colores
-
-En `styles.css`, modifica las variables CSS:
-
 ```css
 :root {
     --quantum-primary: #00C896;
-    --quantum-primary-dark: #00A078;
     --quantum-secondary: #1a2332;
 }
 ```
 
-### Actualizar Vehículos
-
-En `script.js`, edita el objeto `vehicleData`:
-
+### Actualizar Precios (Bs)
 ```javascript
 const vehicleData = {
-    modelo: {
-        name: 'Nombre del Modelo',
-        basePrice: 00000,
-        consumption: 00, // kWh/100km
-        range: 000,
-        power: 000,
-        acceleration: 0.0
-    }
+    e4: { basePrice: 197100 },
+    nexus: { basePrice: 296360 },
+    kaiyi: { basePrice: 158530 }
 };
 ```
 
-### Agregar Secciones
-
-Simplemente añade nuevas secciones HTML siguiendo la estructura:
-
-```html
-<section id="nueva-seccion" class="nombre-clase-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Tag</span>
-            <h2 class="section-title">Título</h2>
-        </div>
-        <!-- Contenido -->
-    </div>
-</section>
+### Actualizar Costos
+```javascript
+const FUEL_PRICE_BS = 6.96;
+const ELECTRICITY_PRICE_BS = 0.88;
 ```
 
-## 📊 Datos de Vehículos
+## 📊 Datos Técnicos
 
-### Modelos Quantum
+### Quantum Models
 
-| Modelo | Precio Base | Autonomía | Potencia | 0-100 km/h |
-|--------|-------------|-----------|----------|------------|
-| E4     | $28,500     | 420 km    | 150 kW   | 8.5s       |
-| Nexus  | $42,800     | 500 km    | 200 kW   | 7.2s       |
-| Kaiyi  | $22,900     | 380 km    | 120 kW   | 9.8s       |
+| Model | Range | Power | 0-100 | Consumption |
+|-------|-------|-------|-------|-------------|
+| E4 | 420km | 150kW | 8.5s | 15 kWh/100km |
+| Nexus | 500km | 200kW | 7.2s | 18 kWh/100km |
+| Kaiyi | 380km | 120kW | 9.8s | 13 kWh/100km |
 
-### Accesorios
+## 🌐 Tecnologías
 
-| Accesorio | Precio |
-|-----------|--------|
-| Techo panorámico | $2,500 |
-| Asientos cuero premium | $1,800 |
-| Sistema sonido premium | $1,200 |
-| Piloto automático | $3,500 |
-
-## 🌐 Tecnologías Utilizadas
-
-- HTML5
-- CSS3 (Variables CSS, Flexbox, Grid, Animations)
-- JavaScript ES6+ (Vanilla JS, no frameworks)
+- HTML5, CSS3, JavaScript ES6+
+- Grid, Flexbox, Animations
 - Google Fonts (Montserrat, Playfair Display)
-- SVG para iconos y gráficos
+- SVG icons inline
+- Vanilla JS (sin frameworks)
 
-## 📱 Responsive
+## 📁 Archivos
 
-- Desktop: > 1024px
-- Tablet: 768px - 1024px
-- Mobile: < 768px
+```
+quantum-phygital/
+├── index.html      (34KB - Estructura)
+├── styles.css      (34KB - Estilos táctiles)
+├── script.js       (16KB - Interacciones)
+└── README.md       (Este archivo)
+```
 
 ## 🎯 Casos de Uso
 
-1. **Showroom Físico**: Pantalla interactiva para clientes
-2. **Eventos**: Presentación en ferias y exposiciones
-3. **Web Corporativa**: Catálogo online completo
-4. **Capacitación**: Material de entrenamiento para vendedores
+1. 🏬 Showroom físico (tablets en stands)
+2. 🎪 Eventos y ferias
+3. 🌐 Website corporativo
+4. 📚 Capacitación de vendedores
+5. 🛒 Puntos de venta
 
-## 🔒 Licencia
+## ✅ Mejoras vs Versión Anterior
 
-© 2025 Quantum Motors. Todos los derechos reservados.
+- ✨ Interactividad tipo menú de tablet
+- 💰 Precios en Bolivianos
+- 🎯 Calculadora wizard 3 pasos
+- 🔗 Link a catálogo tuquantum.com
+- 📱 Feedback háptico
+- 🎨 Animaciones mejoradas
+- 👆 Botones más grandes
+- 🎪 Efectos hover/active
 
-## 👥 Contacto
+## 📞 Contacto
 
-Para soporte o consultas:
-- Email: info@quantummotors.com
-- Teléfono: +591 2 234 5678
-- Dirección: Av. Principal 123, La Paz, Bolivia
+- **Web**: https://tuquantum.com
+- **Catálogo**: https://tuquantum.com/catalogo-vehiculos/
+- **Email**: info@quantummotors.com
+- **Tel**: +591 2 234 5678
+- **Ubicación**: La Paz, Bolivia
 
 ---
 
-**Desarrollado con ❤️ para revolucionar la movilidad eléctrica en América Latina**
+💚 **Versión 2.0 Interactiva** - Diciembre 2025  
+Desarrollado para revolucionar la movilidad eléctrica en Bolivia
