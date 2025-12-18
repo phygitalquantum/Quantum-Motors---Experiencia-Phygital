@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Motors - Experiencia Phygital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300C896;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300A078;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='20' fill='url(%23grad)'/%3E%3Cpath d='M60 60 L140 60 Q160 60 160 80 L160 100 Q160 120 140 120 L100 120 L120 140 L80 140 L60 120 L60 80 Q60 60 80 60 Z' fill='white'/%3E%3Cpath d='M100 90 L120 70 L120 110 Z' fill='url(%23grad)'/%3E%3C/svg%3E" alt="Quantum Motors">
+                <span class="logo-text">QUANTUM</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+                <li><a href="#personalizador" class="nav-link">Personalizador</a></li>
+                <li><a href="#historia" class="nav-link">Nuestra Historia</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">El Futuro de la</span>
+                    <span class="title-line highlight">Movilidad Eléctrica</span>
+                </h1>
+                <p class="hero-subtitle">Descubre la nueva era de vehículos eléctricos inteligentes, sostenibles y diseñados para ti.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="scrollToSection('catalogo')">
+                        Explorar Vehículos
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10h12m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('calculadora')">
+                        Calcular Ahorro
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">500km</div>
+                    <div class="stat-label">Autonomía máxima</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0-100</div>
+                    <div class="stat-label">En 7.8 segundos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Eléctrico</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Desliza para explorar</span>
+        </div>
+    </section>
+
+    <!-- Catálogo de Vehículos -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Modelos</span>
+                <h2 class="section-title">Descubre la Línea Quantum</h2>
+                <p class="section-description">Tecnología de punta, diseño innovador y rendimiento excepcional en cada modelo.</p>
+            </div>
+
+            <div class="catalog-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="sedan">Sedán</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="compact">Compacto</button>
+            </div>
+
+            <div class="vehicle-grid">
+                <!-- Quantum E4 -->
+                <div class="vehicle-card" data-category="sedan" data-vehicle="e4">
+                    <div class="vehicle-image">
+                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span class="vehicle-label">E4</span>
+                        </div>
+                        <div class="vehicle-badge">Más Vendido</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Quantum E4</h3>
+                        <p class="vehicle-tagline">Sedán eléctrico premium</p>
+                        <div class="vehicle-specs">
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 2v16m6-10H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>420 km</span>
+                            </div>
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>150 kW</span>
+                            </div>
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M3 10l3 3 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>8.5s 0-100</span>
+                            </div>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price-label">Desde</span>
+                            <span class="price-amount">$28,500</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="selectVehicle('e4')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Quantum Nexus -->
+                <div class="vehicle-card featured" data-category="suv" data-vehicle="nexus">
+                    <div class="vehicle-image">
+                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #00C896 0%, #00A078 100%);">
+                            <span class="vehicle-label">NEXUS</span>
+                        </div>
+                        <div class="vehicle-badge premium">Premium</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Quantum Nexus</h3>
+                        <p class="vehicle-tagline">SUV eléctrico de lujo</p>
+                        <div class="vehicle-specs">
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 2v16m6-10H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>500 km</span>
+                            </div>
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>200 kW</span>
+                            </div>
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M3 10l3 3 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>7.2s 0-100</span>
+                            </div>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price-label">Desde</span>
+                            <span class="price-amount">$42,800</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="selectVehicle('nexus')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Kaiyi -->
+                <div class="vehicle-card" data-category="compact" data-vehicle="kaiyi">
+                    <div class="vehicle-image">
+                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span class="vehicle-label">KAIYI</span>
+                        </div>
+                        <div class="vehicle-badge">Nuevo</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-name">Kaiyi Urban</h3>
+                        <p class="vehicle-tagline">Compacto urbano inteligente</p>
+                        <div class="vehicle-specs">
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 2v16m6-10H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>380 km</span>
+                            </div>
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>120 kW</span>
+                            </div>
+                            <div class="spec">
+                                <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M3 10l3 3 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>9.8s 0-100</span>
+                            </div>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price-label">Desde</span>
+                            <span class="price-amount">$22,900</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="selectVehicle('kaiyi')">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora de Ahorro -->
+    <section id="calculadora" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ahorro Inteligente</span>
+                <h2 class="section-title">Calculadora de Ahorro</h2>
+                <p class="section-description">Descubre cuánto puedes ahorrar al cambiar a un vehículo eléctrico Quantum</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="currentVehicle">Tu vehículo actual</label>
+                        <select id="currentVehicle" class="form-control">
+                            <option value="">Selecciona una marca</option>
+                            <option value="toyota-corolla">Toyota Corolla</option>
+                            <option value="honda-civic">Honda Civic</option>
+                            <option value="nissan-sentra">Nissan Sentra</option>
+                            <option value="hyundai-tucson">Hyundai Tucson</option>
+                            <option value="ford-escape">Ford Escape</option>
+                            <option value="chevrolet-equinox">Chevrolet Equinox</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantumModel">Modelo Quantum</label>
+                        <select id="quantumModel" class="form-control">
+                            <option value="e4">Quantum E4</option>
+                            <option value="nexus">Quantum Nexus</option>
+                            <option value="kaiyi">Kaiyi Urban</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kmMonth">Kilómetros mensuales</label>
+                        <input type="range" id="kmMonth" class="form-range" min="500" max="3000" value="1500" step="100">
+                        <span class="range-value"><span id="kmValue">1500</span> km/mes</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fuelPrice">Precio gasolina ($/litro)</label>
+                        <input type="number" id="fuelPrice" class="form-control" value="5.80" step="0.10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="electricityPrice">Precio electricidad ($/kWh)</label>
+                        <input type="number" id="electricityPrice" class="form-control" value="1.20" step="0.05">
+                    </div>
+
+                    <button class="btn btn-primary btn-large" onclick="calculateSavings()">
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 12V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Calcular Ahorro
+                    </button>
+                </div>
+
+                <div class="calculator-results" id="calculatorResults">
+                    <div class="result-placeholder">
+                        <svg class="placeholder-icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="30" stroke="#00C896" stroke-width="2" stroke-dasharray="4 4"/>
+                            <path d="M40 25v30m15-15H25" stroke="#00C896" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <p>Completa el formulario y descubre tu ahorro potencial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalizador -->
+    <section id="personalizador" class="customizer-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Personalización</span>
+                <h2 class="section-title">Diseña Tu Quantum</h2>
+                <p class="section-description">Personaliza tu vehículo con los colores y accesorios disponibles</p>
+            </div>
+
+            <div class="customizer-container">
+                <div class="customizer-preview">
+                    <div class="preview-vehicle" id="previewVehicle">
+                        <div class="vehicle-silhouette"></div>
+                    </div>
+                    <div class="preview-controls">
+                        <button class="preview-btn" onclick="rotateVehicle('left')">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="preview-btn" onclick="rotateVehicle('right')">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="customizer-options">
+                    <div class="option-group">
+                        <h3 class="option-title">Modelo</h3>
+                        <div class="model-selector">
+                            <button class="model-btn active" data-model="e4" onclick="selectModel('e4')">E4</button>
+                            <button class="model-btn" data-model="nexus" onclick="selectModel('nexus')">Nexus</button>
+                            <button class="model-btn" data-model="kaiyi" onclick="selectModel('kaiyi')">Kaiyi</button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h3 class="option-title">Color Exterior</h3>
+                        <div class="color-selector">
+                            <button class="color-btn active" data-color="white" onclick="selectColor('white')" style="background: #ffffff; border: 2px solid #ddd;"></button>
+                            <button class="color-btn" data-color="black" onclick="selectColor('black')" style="background: #1a1a1a;"></button>
+                            <button class="color-btn" data-color="silver" onclick="selectColor('silver')" style="background: linear-gradient(135deg, #c0c0c0, #808080);"></button>
+                            <button class="color-btn" data-color="blue" onclick="selectColor('blue')" style="background: #1e3a8a;"></button>
+                            <button class="color-btn" data-color="red" onclick="selectColor('red')" style="background: #dc2626;"></button>
+                            <button class="color-btn" data-color="green" onclick="selectColor('green')" style="background: #00C896;"></button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h3 class="option-title">Accesorios</h3>
+                        <div class="accessory-list">
+                            <label class="accessory-item">
+                                <input type="checkbox" class="accessory-checkbox" value="sunroof">
+                                <span class="accessory-label">Techo panorámico</span>
+                                <span class="accessory-price">+ $2,500</span>
+                            </label>
+                            <label class="accessory-item">
+                                <input type="checkbox" class="accessory-checkbox" value="leather">
+                                <span class="accessory-label">Asientos de cuero premium</span>
+                                <span class="accessory-price">+ $1,800</span>
+                            </label>
+                            <label class="accessory-item">
+                                <input type="checkbox" class="accessory-checkbox" value="sound">
+                                <span class="accessory-label">Sistema de sonido premium</span>
+                                <span class="accessory-price">+ $1,200</span>
+                            </label>
+                            <label class="accessory-item">
+                                <input type="checkbox" class="accessory-checkbox" value="autopilot">
+                                <span class="accessory-label">Piloto automático avanzado</span>
+                                <span class="accessory-price">+ $3,500</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="customizer-summary">
+                        <div class="summary-row">
+                            <span>Precio base:</span>
+                            <span id="basePrice">$28,500</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Accesorios:</span>
+                            <span id="accessoriesPrice">$0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="totalPrice">$28,500</span>
+                        </div>
+                        <button class="btn btn-primary btn-large" onclick="requestQuote()">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia de Quantum -->
+    <section id="historia" class="history-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestra Historia</span>
+                <h2 class="section-title">La Evolución de Quantum</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>El Inicio</h3>
+                        <p>Quantum Motors nace con la visión de revolucionar la movilidad eléctrica en América Latina, combinando tecnología de punta con diseño innovador.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-content">
+                        <h3>Primera Fábrica</h3>
+                        <p>Inauguración de nuestra primera planta de manufactura con capacidad para producir 50,000 vehículos anuales.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>Lanzamiento E4</h3>
+                        <p>Presentamos el Quantum E4, nuestro primer sedán eléctrico que revolucionó el mercado con su autonomía y diseño.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <h3>Expansión Regional</h3>
+                        <p>Quantum expande su presencia a 12 países de América Latina, estableciendo centros de servicio en ciudades principales.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>Quantum Nexus</h3>
+                        <p>Lanzamiento del SUV premium Nexus, incorporando inteligencia artificial y conducción autónoma nivel 2.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>El Futuro es Ahora</h3>
+                        <p>Continuamos innovando con nuevos modelos, tecnología de carga ultra rápida y compromiso con la sostenibilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L4 14l20 10 20-10L24 4z" fill="#00C896"/>
+                            <path d="M4 24l20 10 20-10M4 34l20 10 20-10" stroke="#00C896" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Misión</h3>
+                    <p>Liderar la transición hacia la movilidad eléctrica sostenible, ofreciendo vehículos innovadores que combinan tecnología, diseño y responsabilidad ambiental.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="#00C896" stroke-width="2"/>
+                            <path d="M24 8v16l11 6" stroke="#00C896" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Visión</h3>
+                    <p>Ser la marca líder de vehículos eléctricos en América Latina, reconocida por su innovación, calidad y compromiso con un futuro sostenible.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M12 24l8 8 16-16" stroke="#00C896" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="24" cy="24" r="20" stroke="#00C896" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Valores</h3>
+                    <p>Innovación, sostenibilidad, excelencia y compromiso con nuestros clientes y el medio ambiente en cada decisión que tomamos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Visítanos</h2>
+                    <p class="contact-description">Experimenta la tecnología Quantum en persona. Nuestro equipo está listo para asesorarte.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Av. Principal 123, La Paz, Bolivia</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+591 2 234 5678</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@quantummotors.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lun - Sáb: 9:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Agenda tu Test Drive</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" placeholder="Nombre completo" required>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="Teléfono" required>
+                            <select required>
+                                <option value="">Modelo de interés</option>
+                                <option value="e4">Quantum E4</option>
+                                <option value="nexus">Quantum Nexus</option>
+                                <option value="kaiyi">Kaiyi Urban</option>
+                            </select>
+                        </div>
+                        <textarea placeholder="Mensaje (opcional)" rows="4"></textarea>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300C896;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300A078;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='20' fill='url(%23grad)'/%3E%3Cpath d='M60 60 L140 60 Q160 60 160 80 L160 100 Q160 120 140 120 L100 120 L120 140 L80 140 L60 120 L60 80 Q60 60 80 60 Z' fill='white'/%3E%3Cpath d='M100 90 L120 70 L120 110 Z' fill='url(%23grad)'/%3E%3C/svg%3E" alt="Quantum">
+                        <span>QUANTUM</span>
+                    </div>
+                    <p>Impulsando el futuro de la movilidad eléctrica con innovación y sostenibilidad.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="#catalogo">Quantum E4</a></li>
+                            <li><a href="#catalogo">Quantum Nexus</a></li>
+                            <li><a href="#catalogo">Kaiyi Urban</a></li>
+                            <li><a href="#catalogo">Accesorios</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li><a href="#calculadora">Calculadora de Ahorro</a></li>
+                            <li><a href="#personalizador">Personalización</a></li>
+                            <li><a href="#contacto">Test Drive</a></li>
+                            <li><a href="#contacto">Financiamiento</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#historia">Nuestra Historia</a></li>
+                            <li><a href="#historia">Misión y Visión</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                            <li><a href="#contacto">Ubicaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Quantum Motors. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
