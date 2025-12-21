@@ -1,177 +1,136 @@
-[README.md](https://github.com/user-attachments/files/24226905/README.md)
-# Quantum Motors - Experiencia Phygital Interactiva 🚗⚡
+[README (1).md](https://github.com/user-attachments/files/24276922/README.1.md)
+# Quantum Motors - Experiencia Phygital Actualizada 🚗⚡
 
-Interfaz táctil estilo tablet para showroom con interacciones como menú de restaurante digital.
+Interfaz táctil moderna con tipografía tecnológica y precios actualizados.
 
-## ✨ NUEVO: Interactividad Tipo Tablet
+## ✨ NUEVO - Actualización 2025
 
-### 🎯 Características Interactivas
-- **Cards táctiles** con animaciones (como menú de comida)
-- **Wizard paso a paso** para calculadora
-- **Feedback visual** inmediato en cada toque
-- **Vibración háptica** en dispositivos compatibles
-- **Transiciones suaves** con efectos bounce
+### 💰 Precios Actualizados (Bolivianos)
 
-## 💰 Precios en Bolivianos (Bs)
+| Modelo | Categoría | Precio Base | Detalles |
+|--------|-----------|-------------|----------|
+| **E4** | Auto Micromovilidad | **Bs 80,100** | 120km autonomía, 45 km/h |
+| **Nexus** | Auto Compacto | **Bs 137,300** | 280km autonomía, 90 km/h |
+| **Kaiyi Platinum** | City Car de Lujo | **Bs 202,000** | 350km autonomía, 100 km/h |
 
-| Modelo | Precio Base | Equivalente USD |
-|--------|-------------|-----------------|
-| **E4** | Bs 197,100 | ≈ $28,500 |
-| **Nexus** | Bs 296,360 | ≈ $42,800 |
-| **Kaiyi** | Bs 158,530 | ≈ $22,900 |
+### 🎨 Nueva Tipografía Tecnológica
+- **Primary**: Inter (sans-serif moderna)
+- **Display**: Space Grotesk (títulos tech)
+- Más limpia, moderna y legible
+- Perfecta para interfaces táctiles
 
-### Costos de Combustible
-- ⛽ **Gasolina**: Bs 6.96 / litro
-- 🔌 **Electricidad**: Bs 0.88 / kWh
+### 🖼️ Imágenes Oficiales
+- Integración con https://tuquantum.com/
+- Imágenes reales de vehículos
+- Fallback automático a placeholders
+- Optimizado para carga rápida
 
-## 🎮 Módulos Interactivos
+## 🎯 Características
 
-### 1️⃣ Catálogo Táctil
-- Cards grandes con hover effect
-- Filtros animados con emojis (🌟 🚗 🚙 🚕)
-- Link directo a: https://tuquantum.com/catalogo-vehiculos/
-- Indicador "Toca para ver detalles"
+### Catálogo Actualizado
+- **E4**: Auto Micromovilidad urbana
+- **Nexus**: Auto Compacto versátil
+- **Kaiyi Platinum**: City Car de lujo - Línea Platinum
+- Filtros por categoría: Micromovilidad, Compacto, Premium
+- Link directo a catálogo oficial
 
-### 2️⃣ Calculadora Wizard
-**Paso 1**: Selecciona tu vehículo actual
-- 6 opciones con consumo visible
-- Cards grandes tipo menú
+### Calculadora en Bolivianos
+- Gasolina: **Bs 6.96/litro**
+- Electricidad: **Bs 0.88/kWh**
+- Cálculos precisos con nuevos datos
+- Wizard interactivo 3 pasos
 
-**Paso 2**: Elige tu Quantum
-- Badges: Más Vendido, Premium, Nuevo
-- Specs en cada card
+### Personalizador
+- Imágenes reales de tuquantum.com
+- Vista previa con fotos oficiales
+- 6 colores disponibles
+- 4 accesorios premium (precios en Bs)
 
-**Paso 3**: ¿Cuánto conduces?
-- Slider grande interactivo
-- Botones rápidos: 1000, 1500, 2000, 2500 km
-- Display prominente de kilómetros
-
-**Resultados Animados**:
-- Ahorro mensual/anual en Bs
-- Proyección 5 años
-- Incluye mantenimiento
-
-### 3️⃣ Personalizador 3D
-- Paleta de 6 colores táctil
-- 4 accesorios premium
-- Precio en tiempo real
-- Botones de rotación
-
-## 🚀 Deploy a GitHub Pages
+## 🚀 Deploy Rápido
 
 ```bash
-git init
-git add .
-git commit -m "Quantum Interactive Experience"
-git remote add origin https://github.com/[usuario]/[repo].git
-git push -u origin main
+git clone [tu-repo]
+# O sube directamente a GitHub Pages
 ```
 
-Luego: Settings → Pages → Source: main
+## 📱 Optimizado para Tablets
 
-## 📱 Configuración para Tablet Android
+- Touch targets grandes (44px+)
+- Feedback visual inmediato
+- Tipografía clara y legible
+- Imágenes optimizadas
 
-### Apps Recomendadas
-- **Fully Kiosk Browser** ⭐ (recomendado)
-- Kiosk Browser Lockdown
-- SureLock
+## 🎨 Diseño
 
-### Configuración Óptima
-```
-URL: tu-github-pages-url
-Modo: Pantalla completa
-Orientación: Landscape
-Auto-reload: 12 horas
-Brillo: 100%
-```
-
-### Hardware Recomendado
-- Tablet 10-13"
-- Full HD (1920x1080+)
-- 4GB RAM
-- Android 8.0+
-
-## 🎨 Personalización Rápida
-
-### Cambiar Colores
+### Tipografía Moderna
 ```css
-:root {
-    --quantum-primary: #00C896;
-    --quantum-secondary: #1a2332;
-}
+--font-primary: 'Inter', sans-serif;
+--font-display: 'Space Grotesk', sans-serif;
 ```
 
-### Actualizar Precios (Bs)
-```javascript
-const vehicleData = {
-    e4: { basePrice: 197100 },
-    nexus: { basePrice: 296360 },
-    kaiyi: { basePrice: 158530 }
-};
-```
+### Colores
+- Primary: #00C896 (Verde Quantum)
+- Secondary: #1a2332 (Azul oscuro)
+- Backgrounds: Gradientes sutiles
 
-### Actualizar Costos
-```javascript
-const FUEL_PRICE_BS = 6.96;
-const ELECTRICITY_PRICE_BS = 0.88;
-```
+## 🔗 Enlaces
+
+- **Catálogo Oficial**: https://tuquantum.com/catalogo-vehiculos/
+- **Web Principal**: https://tuquantum.com/
+- **Imágenes**: Desde tuquantum.com CDN
 
 ## 📊 Datos Técnicos
 
-### Quantum Models
+### Consumo Energético
+- E4: ~8 kWh/100km
+- Nexus: ~12 kWh/100km
+- Kaiyi: ~14 kWh/100km
 
-| Model | Range | Power | 0-100 | Consumption |
-|-------|-------|-------|-------|-------------|
-| E4 | 420km | 150kW | 8.5s | 15 kWh/100km |
-| Nexus | 500km | 200kW | 7.2s | 18 kWh/100km |
-| Kaiyi | 380km | 120kW | 9.8s | 13 kWh/100km |
-
-## 🌐 Tecnologías
-
-- HTML5, CSS3, JavaScript ES6+
-- Grid, Flexbox, Animations
-- Google Fonts (Montserrat, Playfair Display)
-- SVG icons inline
-- Vanilla JS (sin frameworks)
+### Comparativa
+- Ahorro vs gasolina: 70-85%
+- Mantenimiento: -60%
+- Impuestos: Descuentos municipales
 
 ## 📁 Archivos
 
 ```
 quantum-phygital/
-├── index.html      (34KB - Estructura)
-├── styles.css      (34KB - Estilos táctiles)
-├── script.js       (16KB - Interacciones)
+├── index.html      (35KB - HTML actualizado)
+├── styles.css      (14KB - Tipografía moderna)
+├── script.js       (15KB - Precios nuevos)
 └── README.md       (Este archivo)
 ```
 
-## 🎯 Casos de Uso
+## ✅ Mejoras vs Anterior
 
-1. 🏬 Showroom físico (tablets en stands)
-2. 🎪 Eventos y ferias
-3. 🌐 Website corporativo
-4. 📚 Capacitación de vendedores
-5. 🛒 Puntos de venta
+- ✨ Precios actualizados (E4, Nexus, Kaiyi)
+- 🎨 Tipografía sans-serif tecnológica
+- 🖼️ Imágenes reales de tuquantum.com
+- 📝 Categorías correctas (Micromovilidad, Compacto, Premium)
+- 🔗 Integración con sitio oficial
+- 💰 Todos los precios en Bolivianos
+- 📱 Mejor legibilidad en tablets
 
-## ✅ Mejoras vs Versión Anterior
+## 🆕 Cambios Específicos
 
-- ✨ Interactividad tipo menú de tablet
-- 💰 Precios en Bolivianos
-- 🎯 Calculadora wizard 3 pasos
-- 🔗 Link a catálogo tuquantum.com
-- 📱 Feedback háptico
-- 🎨 Animaciones mejoradas
-- 👆 Botones más grandes
-- 🎪 Efectos hover/active
+### Precios Anteriores → Nuevos
+- E4: ~~Bs 197,100~~ → **Bs 80,100**
+- Nexus: ~~Bs 296,360~~ → **Bs 137,300**
+- Kaiyi: ~~Bs 158,530~~ → **Bs 202,000**
+
+### Categorías Actualizadas
+- E4: "Auto de micromovilidad"
+- Nexus: "Auto compacto"
+- Kaiyi: "City car de lujo - Línea Platinum"
 
 ## 📞 Contacto
 
+- **Tel**: +591 76488888
 - **Web**: https://tuquantum.com
-- **Catálogo**: https://tuquantum.com/catalogo-vehiculos/
 - **Email**: info@quantummotors.com
-- **Tel**: +591 2 234 5678
 - **Ubicación**: La Paz, Bolivia
 
 ---
 
-💚 **Versión 2.0 Interactiva** - Diciembre 2025  
-Desarrollado para revolucionar la movilidad eléctrica en Bolivia
+💚 **Versión 3.0** - Diciembre 2025
+Precios actualizados | Tipografía moderna | Imágenes oficiales
