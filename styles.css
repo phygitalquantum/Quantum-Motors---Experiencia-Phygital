@@ -1289,3 +1289,421 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   PROFESSIONAL COMPARISON TABLES & CARDS
+   ============================================ */
+
+.comparison-section {
+    margin-top: 4rem;
+}
+
+.comparison-main-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Performance Table */
+.comparison-table-wrapper {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
+    margin-bottom: 4rem;
+}
+
+.performance-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.performance-table thead tr {
+    background: linear-gradient(135deg, var(--quantum-secondary), #0a0e1a);
+}
+
+.table-header-main {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: white;
+    border-radius: 12px 0 0 0;
+    font-weight: 700;
+    width: 35%;
+}
+
+.table-header-electric {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--quantum-primary), var(--quantum-primary-dark));
+    color: white;
+    font-weight: 700;
+    width: 32.5%;
+}
+
+.table-header-gas {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6464, #cc5050);
+    color: white;
+    border-radius: 0 12px 0 0;
+    font-weight: 700;
+    width: 32.5%;
+}
+
+.performance-table tbody tr {
+    transition: all var(--transition-base);
+}
+
+.performance-table tbody tr:hover {
+    background: rgba(0, 200, 150, 0.05);
+    transform: scale(1.01);
+}
+
+.metric-name {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.metric-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.metric-name strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--quantum-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.metric-subtitle {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+}
+
+.value-cell {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.value-cell.electric {
+    background: linear-gradient(135deg, rgba(0, 200, 150, 0.05), rgba(0, 200, 150, 0.02));
+}
+
+.value-cell.gas {
+    background: linear-gradient(135deg, rgba(255, 100, 100, 0.05), rgba(255, 100, 100, 0.02));
+}
+
+.value-big {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.value-cell.electric .value-big {
+    color: var(--quantum-primary);
+}
+
+.value-cell.gas .value-big {
+    color: #ff6464;
+}
+
+.value-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.value-badge.success {
+    background: rgba(0, 200, 150, 0.15);
+    color: var(--quantum-primary-dark);
+}
+
+.value-badge.warning {
+    background: rgba(255, 160, 0, 0.15);
+    color: #cc6600;
+}
+
+.value-badge.danger {
+    background: rgba(255, 100, 100, 0.15);
+    color: #cc0000;
+}
+
+/* Cost Comparison Cards */
+.cost-comparison {
+    margin-top: 4rem;
+}
+
+.comparison-subtitle {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+.cost-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cost-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-base);
+}
+
+.cost-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.cost-card.electric-card {
+    border: 3px solid var(--quantum-primary);
+}
+
+.cost-card.gas-card {
+    border: 3px solid #ff6464;
+}
+
+.cost-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-gray-200);
+}
+
+.cost-card-icon {
+    font-size: 3rem;
+}
+
+.cost-card-header h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--quantum-secondary);
+}
+
+.cost-breakdown {
+    margin-bottom: 2rem;
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.cost-item:last-child {
+    border-bottom: none;
+}
+
+.cost-label {
+    font-size: 0.95rem;
+    color: var(--color-gray-700);
+    font-weight: 500;
+}
+
+.cost-value {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--quantum-secondary);
+}
+
+.cost-value.discount {
+    color: var(--quantum-primary);
+}
+
+.cost-value small {
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.cost-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+.cost-total span:first-child {
+    font-size: 1.1rem;
+}
+
+.total-amount {
+    font-family: var(--font-display);
+    font-size: 2rem;
+}
+
+.electric-total {
+    background: linear-gradient(135deg, var(--quantum-primary), var(--quantum-primary-dark));
+    color: white;
+}
+
+.gas-total {
+    background: linear-gradient(135deg, #ff6464, #cc5050);
+    color: white;
+}
+
+/* Savings Highlight */
+.savings-highlight {
+    background: linear-gradient(135deg, var(--quantum-primary), var(--quantum-primary-dark));
+    padding: 2.5rem;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: var(--shadow-glow);
+    margin-top: 2rem;
+}
+
+.savings-icon {
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+.savings-content h4 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.savings-content p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.savings-content strong {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Quick Facts Grid */
+.quick-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.quick-fact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all var(--transition-base);
+}
+
+.quick-fact-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.fact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.fact-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--quantum-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.fact-label {
+    font-size: 0.95rem;
+    color: var(--color-gray-600);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.fact-detail {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    line-height: 1.5;
+}
+
+/* Responsive Comparison Tables */
+@media (max-width: 1200px) {
+    .cost-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison-table-wrapper {
+        padding: 1rem;
+    }
+    
+    .performance-table {
+        font-size: 0.875rem;
+    }
+    
+    .table-header-main,
+    .table-header-electric,
+    .table-header-gas {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .metric-name {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .value-big {
+        font-size: 1.5rem;
+    }
+    
+    .quick-facts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .savings-highlight {
+        flex-direction: column;
+        text-align: center;
+    }
+}
