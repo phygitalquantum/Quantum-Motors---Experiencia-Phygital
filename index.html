@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
             <div class="logo">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300C896;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300A078;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='20' fill='url(%23grad)'/%3E%3Cpath d='M60 60 L140 60 Q160 60 160 80 L160 100 Q160 120 140 120 L100 120 L120 140 L80 140 L60 120 L60 80 Q60 60 80 60 Z' fill='white'/%3E%3Cpath d='M100 90 L120 70 L120 110 Z' fill='url(%23grad)'/%3E%3C/svg%3E" alt="Quantum Motors">
+                <img src="https://tuquantum.com/wp-content/uploads/2025/10/Logo-Quantum.png" alt="Quantum Motors" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Cdefs%3E%3ClinearGradient id=\'grad\' x1=\'0%25\' y1=\'0%25\' x2=\'100%25\' y2=\'100%25\'%3E%3Cstop offset=\'0%25\' style=\'stop-color:%2300C896;stop-opacity:1\' /%3E%3Cstop offset=\'100%25\' style=\'stop-color:%2300A078;stop-opacity:1\' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'200\' height=\'200\' rx=\'20\' fill=\'url(%23grad)\'/%3E%3Cpath d=\'M60 60 L140 60 Q160 60 160 80 L160 100 Q160 120 140 120 L100 120 L120 140 L80 140 L60 120 L60 80 Q60 60 80 60 Z\' fill=\'white\'/%3E%3Cpath d=\'M100 90 L120 70 L120 110 Z\' fill=\'url(%23grad)\'/%3E%3C/svg%3E'">
                 <span class="logo-text">QUANTUM</span>
             </div>
             <ul class="nav-menu">
@@ -87,53 +87,54 @@
                 <button class="filter-btn active" data-filter="all">
                     <span class="filter-icon">🌟</span> Todos
                 </button>
-                <button class="filter-btn" data-filter="sedan">
-                    <span class="filter-icon">🚗</span> Sedán
+                <button class="filter-btn" data-filter="micromovilidad">
+                    <span class="filter-icon">🚗</span> Micromovilidad
                 </button>
-                <button class="filter-btn" data-filter="suv">
-                    <span class="filter-icon">🚙</span> SUV
+                <button class="filter-btn" data-filter="compacto">
+                    <span class="filter-icon">🚙</span> Compacto
                 </button>
-                <button class="filter-btn" data-filter="compact">
-                    <span class="filter-icon">🚕</span> Compacto
+                <button class="filter-btn" data-filter="premium">
+                    <span class="filter-icon">✨</span> Premium
                 </button>
             </div>
 
             <div class="vehicle-grid">
                 <!-- Quantum E4 -->
-                <div class="vehicle-card interactive-card" data-category="sedan" data-vehicle="e4" onclick="openVehicleDetail('e4')">
+                <div class="vehicle-card interactive-card" data-category="micromovilidad" data-vehicle="e4" onclick="openVehicleDetail('e4')">
                     <div class="vehicle-image">
-                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <img src="https://tuquantum.com/wp-content/uploads/2025/10/E4-MONTANERO.png" alt="Quantum E4" class="vehicle-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: none;">
                             <span class="vehicle-label">E4</span>
                         </div>
-                        <div class="vehicle-badge">Más Vendido</div>
+                        <div class="vehicle-badge">Auto Micromovilidad</div>
                         <div class="touch-indicator">Toca para ver detalles</div>
                     </div>
                     <div class="vehicle-info">
                         <h3 class="vehicle-name">Quantum E4</h3>
-                        <p class="vehicle-tagline">Sedán eléctrico premium</p>
+                        <p class="vehicle-tagline">Auto de micromovilidad urbana</p>
                         <div class="vehicle-specs">
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10 2v16m6-10H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
-                                <span>420 km</span>
+                                <span>120 km</span>
                             </div>
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                                 </svg>
-                                <span>150 kW</span>
+                                <span>4 kW</span>
                             </div>
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M3 10l3 3 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>8.5s 0-100</span>
+                                <span>45 km/h</span>
                             </div>
                         </div>
                         <div class="vehicle-price">
                             <span class="price-label">Desde</span>
-                            <span class="price-amount">Bs 197,100</span>
+                            <span class="price-amount">Bs 80,100</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline btn-icon-text">
@@ -147,40 +148,41 @@
                 </div>
 
                 <!-- Quantum Nexus -->
-                <div class="vehicle-card interactive-card featured" data-category="suv" data-vehicle="nexus" onclick="openVehicleDetail('nexus')">
+                <div class="vehicle-card interactive-card" data-category="compacto" data-vehicle="nexus" onclick="openVehicleDetail('nexus')">
                     <div class="vehicle-image">
-                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #00C896 0%, #00A078 100%);">
+                        <img src="https://tuquantum.com/wp-content/uploads/2025/10/NEXUS.png" alt="Quantum Nexus" class="vehicle-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #00C896 0%, #00A078 100%); display: none;">
                             <span class="vehicle-label">NEXUS</span>
                         </div>
-                        <div class="vehicle-badge premium">Premium</div>
+                        <div class="vehicle-badge compact">Auto Compacto</div>
                         <div class="touch-indicator">Toca para ver detalles</div>
                     </div>
                     <div class="vehicle-info">
                         <h3 class="vehicle-name">Quantum Nexus</h3>
-                        <p class="vehicle-tagline">SUV eléctrico de lujo</p>
+                        <p class="vehicle-tagline">Auto compacto versátil</p>
                         <div class="vehicle-specs">
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10 2v16m6-10H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
-                                <span>500 km</span>
+                                <span>280 km</span>
                             </div>
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                                 </svg>
-                                <span>200 kW</span>
+                                <span>30 kW</span>
                             </div>
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M3 10l3 3 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>7.2s 0-100</span>
+                                <span>90 km/h</span>
                             </div>
                         </div>
                         <div class="vehicle-price">
                             <span class="price-label">Desde</span>
-                            <span class="price-amount">Bs 296,360</span>
+                            <span class="price-amount">Bs 137,300</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-primary btn-icon-text">
@@ -194,43 +196,44 @@
                 </div>
 
                 <!-- Kaiyi -->
-                <div class="vehicle-card interactive-card" data-category="compact" data-vehicle="kaiyi" onclick="openVehicleDetail('kaiyi')">
+                <div class="vehicle-card interactive-card featured" data-category="premium" data-vehicle="kaiyi" onclick="openVehicleDetail('kaiyi')">
                     <div class="vehicle-image">
-                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <span class="vehicle-label">KAIYI</span>
+                        <img src="https://tuquantum.com/wp-content/uploads/2025/10/Nexus-Plus-1.png" alt="Kaiyi Platinum" class="vehicle-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="vehicle-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: none;">
+                            <span class="vehicle-label">PLATINUM</span>
                         </div>
-                        <div class="vehicle-badge new">Nuevo</div>
+                        <div class="vehicle-badge premium">Línea Platinum</div>
                         <div class="touch-indicator">Toca para ver detalles</div>
                     </div>
                     <div class="vehicle-info">
-                        <h3 class="vehicle-name">Kaiyi Urban</h3>
-                        <p class="vehicle-tagline">Compacto urbano inteligente</p>
+                        <h3 class="vehicle-name">Kaiyi Platinum</h3>
+                        <p class="vehicle-tagline">City car de lujo</p>
                         <div class="vehicle-specs">
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10 2v16m6-10H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
-                                <span>380 km</span>
+                                <span>350 km</span>
                             </div>
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                                 </svg>
-                                <span>120 kW</span>
+                                <span>40 kW</span>
                             </div>
                             <div class="spec">
                                 <svg class="spec-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M3 10l3 3 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>9.8s 0-100</span>
+                                <span>100 km/h</span>
                             </div>
                         </div>
                         <div class="vehicle-price">
                             <span class="price-label">Desde</span>
-                            <span class="price-amount">Bs 158,530</span>
+                            <span class="price-amount">Bs 202,000</span>
                         </div>
                         <div class="card-actions">
-                            <button class="btn btn-outline btn-icon-text">
+                            <button class="btn btn-primary btn-icon-text">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10 3v14m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
@@ -243,7 +246,7 @@
 
             <div class="catalog-cta">
                 <a href="https://tuquantum.com/catalogo-vehiculos/" target="_blank" class="btn btn-primary btn-large">
-                    Ver Catálogo Completo
+                    Ver Catálogo Completo en tuquantum.com
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7 3l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -252,7 +255,9 @@
         </div>
     </section>
 
-    <!-- Calculadora de Ahorro - Nueva versión interactiva -->
+    <!-- Calculator, Customizer, History, Contact sections remain similar but with updated prices... -->
+    <!-- I'll include the critical calculator section with updated data -->
+
     <section id="calculadora" class="calculator-section">
         <div class="container-full">
             <div class="section-header">
@@ -262,7 +267,6 @@
             </div>
 
             <div class="calculator-wizard">
-                <!-- Step 1: Current Vehicle -->
                 <div class="wizard-step active" id="step1">
                     <h3 class="wizard-title">
                         <span class="step-badge">1</span>
@@ -302,7 +306,6 @@
                     </div>
                 </div>
 
-                <!-- Step 2: Quantum Model -->
                 <div class="wizard-step" id="step2">
                     <h3 class="wizard-title">
                         <span class="step-badge">2</span>
@@ -310,39 +313,38 @@
                     </h3>
                     <div class="quantum-grid-calc">
                         <button class="quantum-calc-card" onclick="selectQuantumVehicle('e4')">
-                            <div class="quantum-calc-badge">Más Vendido</div>
+                            <div class="quantum-calc-badge">Micromovilidad</div>
                             <h4>Quantum E4</h4>
-                            <p>Sedán Premium</p>
+                            <p>Auto Urbano</p>
                             <div class="quantum-calc-specs">
-                                <span>420 km</span>
-                                <span>150 kW</span>
+                                <span>120 km</span>
+                                <span>4 kW</span>
                             </div>
-                            <div class="quantum-calc-price">Bs 197,100</div>
+                            <div class="quantum-calc-price">Bs 80,100</div>
                         </button>
-                        <button class="quantum-calc-card featured" onclick="selectQuantumVehicle('nexus')">
-                            <div class="quantum-calc-badge premium">Premium</div>
+                        <button class="quantum-calc-card" onclick="selectQuantumVehicle('nexus')">
+                            <div class="quantum-calc-badge compact">Compacto</div>
                             <h4>Quantum Nexus</h4>
-                            <p>SUV de Lujo</p>
+                            <p>Auto Versátil</p>
                             <div class="quantum-calc-specs">
-                                <span>500 km</span>
-                                <span>200 kW</span>
+                                <span>280 km</span>
+                                <span>30 kW</span>
                             </div>
-                            <div class="quantum-calc-price">Bs 296,360</div>
+                            <div class="quantum-calc-price">Bs 137,300</div>
                         </button>
-                        <button class="quantum-calc-card" onclick="selectQuantumVehicle('kaiyi')">
-                            <div class="quantum-calc-badge new">Nuevo</div>
-                            <h4>Kaiyi Urban</h4>
-                            <p>Compacto Urbano</p>
+                        <button class="quantum-calc-card featured" onclick="selectQuantumVehicle('kaiyi')">
+                            <div class="quantum-calc-badge premium">Platinum</div>
+                            <h4>Kaiyi Platinum</h4>
+                            <p>City Car de Lujo</p>
                             <div class="quantum-calc-specs">
-                                <span>380 km</span>
-                                <span>120 kW</span>
+                                <span>350 km</span>
+                                <span>40 kW</span>
                             </div>
-                            <div class="quantum-calc-price">Bs 158,530</div>
+                            <div class="quantum-calc-price">Bs 202,000</div>
                         </button>
                     </div>
                 </div>
 
-                <!-- Step 3: Usage -->
                 <div class="wizard-step" id="step3">
                     <h3 class="wizard-title">
                         <span class="step-badge">3</span>
@@ -369,7 +371,6 @@
                     </button>
                 </div>
 
-                <!-- Step Indicators -->
                 <div class="step-dots">
                     <span class="dot active"></span>
                     <span class="dot"></span>
@@ -377,7 +378,6 @@
                 </div>
             </div>
 
-            <!-- Results Panel -->
             <div class="results-panel" id="resultsPanel">
                 <div class="results-placeholder">
                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
@@ -388,7 +388,6 @@
                 </div>
             </div>
 
-            <!-- Pricing Reference -->
             <div class="pricing-reference">
                 <div class="pricing-item">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -414,19 +413,19 @@
         </div>
     </section>
 
-    <!-- Personalizador (continuará en siguiente parte...) -->
+    <!-- Personalizador with images -->
     <section id="personalizador" class="customizer-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Personalización</span>
                 <h2 class="section-title">Diseña Tu Quantum</h2>
-                <p class="section-description">Toca para personalizar</p>
+                <p class="section-description">Toca para personalizar tu vehículo</p>
             </div>
 
             <div class="customizer-layout">
                 <div class="customizer-preview">
                     <div class="preview-vehicle" id="previewVehicle">
-                        <div class="vehicle-3d"></div>
+                        <img id="vehiclePreviewImg" src="https://tuquantum.com/wp-content/uploads/2025/10/E4-MONTANERO.png" alt="Vista previa" class="vehicle-preview-image">
                     </div>
                     <div class="preview-controls">
                         <button class="control-btn" onclick="rotateVehicle('left')">
@@ -448,7 +447,7 @@
                         <div class="model-buttons">
                             <button class="model-btn active" onclick="selectModel('e4')">E4</button>
                             <button class="model-btn" onclick="selectModel('nexus')">Nexus</button>
-                            <button class="model-btn" onclick="selectModel('kaiyi')">Kaiyi</button>
+                            <button class="model-btn" onclick="selectModel('kaiyi')">Kaiyi Platinum</button>
                         </div>
                     </div>
 
@@ -493,7 +492,7 @@
                     <div class="price-summary">
                         <div class="summary-row">
                             <span>Precio base:</span>
-                            <span id="basePrice">Bs 197,100</span>
+                            <span id="basePrice">Bs 80,100</span>
                         </div>
                         <div class="summary-row">
                             <span>Accesorios:</span>
@@ -501,7 +500,7 @@
                         </div>
                         <div class="summary-total">
                             <span>Total:</span>
-                            <span id="totalPrice">Bs 197,100</span>
+                            <span id="totalPrice">Bs 80,100</span>
                         </div>
                         <button class="btn btn-primary btn-large btn-full" onclick="requestQuote()">
                             Solicitar Cotización
@@ -512,14 +511,13 @@
         </div>
     </section>
 
-    <!-- Historia, Contacto y Footer se mantienen igual -->
+    <!-- Rest of sections: History, Contact, Footer... -->
     <section id="historia" class="history-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Nuestra Historia</span>
                 <h2 class="section-title">La Evolución de Quantum</h2>
             </div>
-
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">2015</div>
@@ -532,69 +530,448 @@
                     <div class="timeline-year">2019</div>
                     <div class="timeline-content">
                         <h3>Lanzamiento E4</h3>
-                        <p>Presentamos el Quantum E4, nuestro primer sedán eléctrico premium.</p>
+                        <p>Presentamos el Quantum E4, nuestro primer vehículo de micromovilidad urbana.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2023</div>
                     <div class="timeline-content">
                         <h3>Quantum Nexus</h3>
-                        <p>Lanzamiento del SUV premium con IA y conducción autónoma nivel 2.</p>
+                        <p>Lanzamiento del auto compacto versátil con tecnología avanzada.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2025</div>
                     <div class="timeline-content">
-                        <h3>El Futuro es Ahora</h3>
-                        <p>Continuamos innovando con tecnología de carga ultra rápida.</p>
+                        <h3>Línea Platinum</h3>
+                        <p>Introducción de la línea premium con el Kaiyi Platinum, city car de lujo.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="contact-section">
+    <!-- Test Drive Section - Amplified -->
+    <section id="contacto" class="testdrive-section">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Visítanos</h2>
-                    <p class="contact-lead">Experimenta la tecnología Quantum en persona.</p>
-                    <div class="info-list">
-                        <div class="info-item">
-                            <svg width="24" height="24" fill="none">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#00C896" stroke-width="2"/>
-                                <circle cx="12" cy="10" r="3" stroke="#00C896" stroke-width="2"/>
-                            </svg>
-                            <div>
-                                <h4>Dirección</h4>
-                                <p>La Paz, Bolivia</p>
+            <div class="section-header">
+                <span class="section-tag">Experiencia Quantum</span>
+                <h2 class="section-title">Test Drive: Siente la Diferencia</h2>
+                <p class="section-description">Descubre por qué los vehículos eléctricos son superiores en La Paz</p>
+            </div>
+
+            <!-- La Paz Advantages -->
+            <div class="lapaz-advantages">
+                <div class="advantage-hero">
+                    <div class="advantage-content">
+                        <h3>🏔️ Optimizado para La Paz</h3>
+                        <p class="advantage-intro">A 3,640 metros sobre el nivel del mar, los vehículos eléctricos de Quantum demuestran su verdadera superioridad.</p>
+                        
+                        <div class="advantage-grid">
+                            <div class="advantage-card">
+                                <div class="advantage-icon">⚡</div>
+                                <h4>Torque Instantáneo</h4>
+                                <p>100% del torque desde 0 RPM. En las pendientes de La Paz, sientes la potencia inmediata sin importar la altura.</p>
+                                <div class="advantage-stat">
+                                    <span class="stat-highlight">0 segundos</span>
+                                    <span class="stat-label">de espera de potencia</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="info-item">
-                            <svg width="24" height="24" fill="none">
-                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#00C896" stroke-width="2"/>
-                            </svg>
-                            <div>
-                                <h4>Teléfono</h4>
-                                <p>+591 2 234 5678</p>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🫁</div>
+                                <h4>Sin Pérdida de Potencia</h4>
+                                <p>Los motores de gasolina pierden hasta 25% de potencia en altura. Los eléctricos mantienen 100% del rendimiento.</p>
+                                <div class="advantage-stat">
+                                    <span class="stat-highlight">100%</span>
+                                    <span class="stat-label">potencia garantizada</span>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🔋</div>
+                                <h4>Regeneración en Bajadas</h4>
+                                <p>Recupera hasta 30% de energía en las bajadas. La topografía de La Paz se convierte en tu aliada.</p>
+                                <div class="advantage-stat">
+                                    <span class="stat-highlight">+30%</span>
+                                    <span class="stat-label">autonomía recuperada</span>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">🌡️</div>
+                                <h4>Arranque en Frío</h4>
+                                <p>Sin problemas en mañanas heladas. Arranca instantáneamente a -5°C mientras otros luchan por encender.</p>
+                                <div class="advantage-stat">
+                                    <span class="stat-highlight">Instantáneo</span>
+                                    <span class="stat-label">en cualquier temperatura</span>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">💨</div>
+                                <h4>Aire Limpio</h4>
+                                <p>Cero emisiones en una ciudad que necesita aire puro. Tu vehículo no contamina en el aire delgado de La Paz.</p>
+                                <div class="advantage-stat">
+                                    <span class="stat-highlight">0 kg</span>
+                                    <span class="stat-label">CO₂ emitido</span>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card">
+                                <div class="advantage-icon">💰</div>
+                                <h4>Eficiencia Extrema</h4>
+                                <p>En altura, los motores eléctricos son hasta 85% más eficientes. Ahorro real en cada kilómetro.</p>
+                                <div class="advantage-stat">
+                                    <span class="stat-highlight">85%</span>
+                                    <span class="stat-label">más eficiente</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Agenda tu Test Drive</h3>
-                    <form id="contactForm" onsubmit="submitContact(event)">
-                        <input type="text" placeholder="Nombre completo" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Teléfono" required>
-                        <select required>
-                            <option value="">Modelo de interés</option>
-                            <option>Quantum E4</option>
-                            <option>Quantum Nexus</option>
-                            <option>Kaiyi Urban</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary btn-large">Enviar Solicitud</button>
+
+                <div class="comparison-banner">
+                    <div class="comparison-side electric">
+                        <h4>⚡ Vehículo Eléctrico en La Paz</h4>
+                        <ul>
+                            <li>✅ Potencia constante a 3,640 msnm</li>
+                            <li>✅ Torque instantáneo en pendientes</li>
+                            <li>✅ Regeneración en bajadas</li>
+                            <li>✅ Arranque instantáneo en frío</li>
+                            <li>✅ Cero pérdida de rendimiento</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-divider">VS</div>
+                    <div class="comparison-side gasoline">
+                        <h4>⛽ Vehículo de Gasolina en La Paz</h4>
+                        <ul>
+                            <li>❌ Pierde 20-25% de potencia</li>
+                            <li>❌ Aceleración lenta en subidas</li>
+                            <li>❌ Consume más combustible</li>
+                            <li>❌ Difícil arranque en frío</li>
+                            <li>❌ Mayor desgaste del motor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Drive Options -->
+            <div class="testdrive-options">
+                <h3 class="options-title">Elige tu Experiencia Test Drive</h3>
+                
+                <div class="testdrive-grid">
+                    <!-- Physical Test Drive -->
+                    <div class="testdrive-card physical">
+                        <div class="testdrive-badge">Recomendado</div>
+                        <div class="testdrive-icon">🚗</div>
+                        <h4>Test Drive Físico</h4>
+                        <p>Experimenta el verdadero poder eléctrico en las calles de La Paz</p>
+                        
+                        <div class="testdrive-features">
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Recorrido real por La Paz (45 min)</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Prueba en subidas y bajadas</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Acompañamiento de especialista</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Comparación directa con gasolina</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-full" onclick="openTestDriveForm('physical')">
+                            Reservar Test Drive Físico
+                        </button>
+                    </div>
+
+                    <!-- VR Test Drive -->
+                    <div class="testdrive-card virtual">
+                        <div class="testdrive-badge vr">Tecnología VR</div>
+                        <div class="testdrive-icon">🥽</div>
+                        <h4>Test Drive Virtual Reality</h4>
+                        <p>Experiencia inmersiva 360° con simulación realista de La Paz</p>
+                        
+                        <div class="testdrive-features">
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Simulación 3D de La Paz (20 min)</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Prueba los 3 modelos virtualmente</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Visualización de datos en tiempo real</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Disponible sin vehículo físico</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline btn-full" onclick="openTestDriveForm('vr')">
+                            Reservar Test Drive VR
+                        </button>
+                    </div>
+
+                    <!-- AR Test Drive -->
+                    <div class="testdrive-card augmented">
+                        <div class="testdrive-badge ar">Realidad Aumentada</div>
+                        <div class="testdrive-icon">📱</div>
+                        <h4>Experiencia AR en Tienda</h4>
+                        <p>Visualiza el vehículo en 3D y explora cada detalle con tu tablet</p>
+                        
+                        <div class="testdrive-features">
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Visualización 3D a escala real</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Cambia colores y accesorios en vivo</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Explora interior y motor eléctrico</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="#00C896"/>
+                                </svg>
+                                <span>Sesión guiada en showroom</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline btn-full" onclick="openTestDriveForm('ar')">
+                            Agendar Experiencia AR
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservation Form Modal -->
+            <div class="testdrive-modal" id="testdriveModal">
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeTestDriveForm()">×</button>
+                    
+                    <div class="modal-header">
+                        <h3 id="modalTitle">Reserva tu Test Drive</h3>
+                        <p id="modalSubtitle">Completa tus datos y genera tu ticket QR</p>
+                    </div>
+
+                    <form id="testdriveForm" onsubmit="submitTestDrive(event)">
+                        <input type="hidden" id="testdriveType" value="">
+                        
+                        <div class="form-group-inline">
+                            <div class="form-field">
+                                <label>Nombre Completo *</label>
+                                <input type="text" id="fullName" required placeholder="Juan Pérez">
+                            </div>
+                            <div class="form-field">
+                                <label>Carnet de Identidad *</label>
+                                <input type="text" id="ci" required placeholder="1234567 LP">
+                            </div>
+                        </div>
+
+                        <div class="form-group-inline">
+                            <div class="form-field">
+                                <label>Teléfono/Celular *</label>
+                                <input type="tel" id="phone" required placeholder="+591 70123456">
+                            </div>
+                            <div class="form-field">
+                                <label>Email *</label>
+                                <input type="email" id="email" required placeholder="correo@ejemplo.com">
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Modelo de Interés *</label>
+                            <select id="vehicleModel" required>
+                                <option value="">Selecciona un modelo</option>
+                                <option value="e4">Quantum E4 - Micromovilidad (Bs 80,100)</option>
+                                <option value="nexus">Quantum Nexus - Compacto (Bs 137,300)</option>
+                                <option value="kaiyi">Kaiyi Platinum - Premium (Bs 202,000)</option>
+                                <option value="todos">Quiero probar todos los modelos</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-inline">
+                            <div class="form-field">
+                                <label>Fecha Preferida *</label>
+                                <input type="date" id="preferredDate" required min="">
+                            </div>
+                            <div class="form-field">
+                                <label>Hora Preferida *</label>
+                                <select id="preferredTime" required>
+                                    <option value="">Selecciona horario</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label>¿Tienes licencia de conducir?</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="license" value="yes" required>
+                                    <span>Sí, tengo licencia</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="license" value="no">
+                                    <span>No, solo quiero la experiencia virtual/AR</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Comentarios adicionales</label>
+                            <textarea id="comments" rows="3" placeholder="Alguna preferencia especial o pregunta..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM8 8h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z" fill="currentColor"/>
+                            </svg>
+                            Generar Ticket QR
+                        </button>
                     </form>
+                </div>
+            </div>
+
+            <!-- QR Ticket Display -->
+            <div class="qr-modal" id="qrModal">
+                <div class="qr-modal-content">
+                    <button class="modal-close" onclick="closeQRModal()">×</button>
+                    
+                    <div class="qr-success">
+                        <div class="success-icon">✅</div>
+                        <h3>¡Reserva Confirmada!</h3>
+                        <p>Tu ticket de Test Drive ha sido generado</p>
+                    </div>
+
+                    <div class="qr-ticket">
+                        <div class="ticket-header">
+                            <img src="https://tuquantum.com/wp-content/uploads/2025/10/Logo-Quantum.png" alt="Quantum" class="ticket-logo">
+                            <div class="ticket-title">
+                                <h4>TICKET TEST DRIVE</h4>
+                                <p id="ticketType">Test Drive Físico</p>
+                            </div>
+                        </div>
+
+                        <div class="ticket-qr" id="qrcode"></div>
+
+                        <div class="ticket-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Nombre:</span>
+                                <span class="detail-value" id="ticketName"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">CI:</span>
+                                <span class="detail-value" id="ticketCI"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Modelo:</span>
+                                <span class="detail-value" id="ticketModel"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Fecha:</span>
+                                <span class="detail-value" id="ticketDate"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Hora:</span>
+                                <span class="detail-value" id="ticketTime"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Código:</span>
+                                <span class="detail-value ticket-code" id="ticketCode"></span>
+                            </div>
+                        </div>
+
+                        <div class="ticket-instructions">
+                            <p><strong>📱 Presenta este QR en la tienda</strong></p>
+                            <p>Guarda una captura de pantalla o muestra este código al llegar</p>
+                        </div>
+                    </div>
+
+                    <div class="qr-actions">
+                        <button class="btn btn-primary" onclick="downloadTicket()">
+                            📥 Descargar Ticket
+                        </button>
+                        <button class="btn btn-outline" onclick="shareTicket()">
+                            📤 Compartir por WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-bar">
+                <div class="info-bar-item">
+                    <svg width="24" height="24" fill="none">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#00C896" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" stroke="#00C896" stroke-width="2"/>
+                    </svg>
+                    <div>
+                        <strong>Showroom La Paz</strong>
+                        <p>Av. Principal, Zona Sur</p>
+                    </div>
+                </div>
+                <div class="info-bar-item">
+                    <svg width="24" height="24" fill="none">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#00C896" stroke-width="2"/>
+                    </svg>
+                    <div>
+                        <strong>Reservas</strong>
+                        <p>+591 76488888</p>
+                    </div>
+                </div>
+                <div class="info-bar-item">
+                    <svg width="24" height="24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="#00C896" stroke-width="2"/>
+                        <path d="M12 6v6l4 2" stroke="#00C896" stroke-width="2"/>
+                    </svg>
+                    <div>
+                        <strong>Horario</strong>
+                        <p>Lun - Sáb: 9:00 AM - 7:00 PM</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -605,7 +982,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300C896;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300A078;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='20' fill='url(%23grad)'/%3E%3Cpath d='M60 60 L140 60 Q160 60 160 80 L160 100 Q160 120 140 120 L100 120 L120 140 L80 140 L60 120 L60 80 Q60 60 80 60 Z' fill='white'/%3E%3Cpath d='M100 90 L120 70 L120 110 Z' fill='url(%23grad)'/%3E%3C/svg%3E" alt="Quantum">
+                        <img src="https://tuquantum.com/wp-content/uploads/2025/09/Logo-Quan-1.png" alt="Quantum" onerror="this.style.display='none'">
                         <span>QUANTUM</span>
                     </div>
                     <p>Impulsando el futuro de la movilidad eléctrica.</p>
