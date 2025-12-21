@@ -1,34 +1,34 @@
-// ============================================
-// QUANTUM MOTORS - INTERACTIVE PHYGITAL
-// Enhanced Touch Interface JavaScript
-// Currency: Bolivianos (Bs)
-// ============================================
-
-// Vehicle Database (Prices in Bolivianos)
+// QUANTUM MOTORS - Updated Prices in Bolivianos
 const vehicleData = {
     e4: {
         name: 'Quantum E4',
-        basePrice: 197100,
-        consumption: 15, // kWh/100km
-        range: 420,
-        power: 150,
-        acceleration: 8.5
+        category: 'Auto Micromovilidad',
+        basePrice: 80100,
+        consumption: 8, // kWh/100km (estimated for micromovilidad)
+        range: 120,
+        power: 4,
+        maxSpeed: 45,
+        image: 'https://tuquantum.com/wp-content/uploads/2025/10/E4-MONTANERO.png'
     },
     nexus: {
         name: 'Quantum Nexus',
-        basePrice: 296360,
-        consumption: 18,
-        range: 500,
-        power: 200,
-        acceleration: 7.2
+        category: 'Auto Compacto',
+        basePrice: 137300,
+        consumption: 12, // kWh/100km
+        range: 280,
+        power: 30,
+        maxSpeed: 90,
+        image: 'https://tuquantum.com/wp-content/uploads/2025/10/NEXUS.png'
     },
     kaiyi: {
-        name: 'Kaiyi Urban',
-        basePrice: 158530,
-        consumption: 13,
-        range: 380,
-        power: 120,
-        acceleration: 9.8
+        name: 'Kaiyi Platinum',
+        category: 'City Car de Lujo',
+        basePrice: 202000,
+        consumption: 14, // kWh/100km
+        range: 350,
+        power: 40,
+        maxSpeed: 100,
+        image: 'https://tuquantum.com/wp-content/uploads/2025/10/Nexus-Plus-1.png'
     }
 };
 
@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initCalculator();
     initCustomizer();
     initAnimations();
-    console.log('🚗 Quantum Motors Interactive Experience Loaded');
+    console.log('🚗 Quantum Motors - Sistema Actualizado');
+    console.log('💰 Precios actualizados en Bolivianos');
 });
 
 function initNavigation() {
@@ -204,13 +205,11 @@ function calculateInteractiveSavings() {
     const quantum = vehicleData[quantumModel];
     const gasolineCostMonth = (kmPerMonth * competitor.consumption / 100) * FUEL_PRICE_BS;
     const electricCostMonth = (kmPerMonth * quantum.consumption / 100) * ELECTRICITY_PRICE_BS;
-    const gasolineCostYear = gasolineCostMonth * 12;
-    const electricCostYear = electricCostMonth * 12;
     const savingsMonth = gasolineCostMonth - electricCostMonth;
-    const savingsYear = gasolineCostYear - electricCostYear;
+    const savingsYear = savingsMonth * 12;
     const maintenanceSavingsYear = 8300;
     const totalSavingsYear = savingsYear + maintenanceSavingsYear;
-    const savings5Years = (savingsYear * 5) + (maintenanceSavingsYear * 5);
+    const savings5Years = totalSavingsYear * 5;
     displayResults({
         competitor: competitor.name,
         quantum: quantum.name,
@@ -240,18 +239,18 @@ function displayResults(data) {
                 <div class="result-value">Bs ${data.savingsMonth.toFixed(2)}</div>
             </div>
             <div class="result-card">
-                <div class="result-label">Ahorro anual en combustible</div>
+                <div class="result-label">Ahorro anual</div>
                 <div class="result-value">Bs ${data.savingsYear.toLocaleString('es-BO', {minimumFractionDigits: 2})}</div>
             </div>
             <div class="result-highlight">
                 <h3>🎉 Ahorro Total Anual</h3>
-                <span class="big-savings">Bs ${data.totalSavingsYear.toLocaleString('es-BO', {minimumFractionDigits: 0})}</span>
-                <p>Incluyendo mantenimiento y costos operativos</p>
+                <span class="big-savings">Bs ${data.totalSavingsYear.toLocaleString('es-BO')}</span>
+                <p>Incluyendo mantenimiento</p>
             </div>
             <div class="result-highlight" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                <h3>💰 Proyección a 5 Años</h3>
-                <span class="big-savings">Bs ${data.savings5Years.toLocaleString('es-BO', {minimumFractionDigits: 0})}</span>
-                <p>Ahorro total al cambiar de ${data.competitor} a ${data.quantum}</p>
+                <h3>💰 Proyección 5 Años</h3>
+                <span class="big-savings">Bs ${data.savings5Years.toLocaleString('es-BO')}</span>
+                <p>Al cambiar de ${data.competitor} a ${data.quantum}</p>
             </div>
         </div>
     `;
@@ -289,29 +288,19 @@ function updateCustomizer() {
 }
 
 function updateCustomizerPreview() {
-    const vehicle3d = document.querySelector('.vehicle-3d');
-    const colorMap = {
-        white: '#ffffff',
-        black: '#1a1a1a',
-        silver: 'linear-gradient(135deg, #c0c0c0, #808080)',
-        blue: '#1e3a8a',
-        red: '#dc2626',
-        green: '#00C896'
-    };
-    if (vehicle3d) {
-        vehicle3d.style.background = colorMap[customizerState.color] || colorMap.white;
-        vehicle3d.style.transform = 'scale(0.95) rotateY(0deg)';
-        setTimeout(() => vehicle3d.style.transform = 'scale(1) rotateY(0deg)', 200);
+    const vehicle = vehicleData[customizerState.model];
+    const previewImg = document.getElementById('vehiclePreviewImg');
+    if (previewImg && vehicle.image) {
+        previewImg.src = vehicle.image;
+        previewImg.style.transform = 'scale(0.95)';
+        setTimeout(() => previewImg.style.transform = 'scale(1)', 200);
     }
 }
 
 function updateCustomizerPrice() {
     const vehicle = vehicleData[customizerState.model];
     let basePrice = vehicle.basePrice;
-    let accessoriesTotal = 0;
-    customizerState.accessories.forEach(accessory => {
-        accessoriesTotal += accessoryPrices[accessory];
-    });
+    let accessoriesTotal = customizerState.accessories.reduce((sum, acc) => sum + accessoryPrices[acc], 0);
     const totalPrice = basePrice + accessoriesTotal;
     document.getElementById('basePrice').textContent = `Bs ${basePrice.toLocaleString('es-BO')}`;
     document.getElementById('accessoriesTotal').textContent = `Bs ${accessoriesTotal.toLocaleString('es-BO')}`;
@@ -319,14 +308,14 @@ function updateCustomizerPrice() {
 }
 
 function rotateVehicle(direction) {
-    const vehicle3d = document.querySelector('.vehicle-3d');
+    const previewImg = document.getElementById('vehiclePreviewImg');
     if ('vibrate' in navigator) navigator.vibrate(40);
     if (direction === 'left') {
-        vehicle3d.style.transform = 'scale(0.9) rotateY(-20deg)';
+        previewImg.style.transform = 'scale(0.9) rotateY(-10deg)';
     } else {
-        vehicle3d.style.transform = 'scale(0.9) rotateY(20deg)';
+        previewImg.style.transform = 'scale(0.9) rotateY(10deg)';
     }
-    setTimeout(() => vehicle3d.style.transform = 'scale(1) rotateY(0deg)', 300);
+    setTimeout(() => previewImg.style.transform = 'scale(1) rotateY(0deg)', 300);
 }
 
 function requestQuote() {
@@ -334,39 +323,29 @@ function requestQuote() {
     const accessories = customizerState.accessories.map(acc => {
         const labels = {
             sunroof: 'Techo panorámico',
-            leather: 'Asientos de cuero premium',
-            sound: 'Sistema de sonido premium',
-            autopilot: 'Piloto automático avanzado'
+            leather: 'Asientos de cuero',
+            sound: 'Sistema de sonido',
+            autopilot: 'Piloto automático'
         };
         return `${labels[acc]} (Bs ${accessoryPrices[acc].toLocaleString('es-BO')})`;
     }).join('\n') || 'Ninguno';
-    const colorNames = {
-        white: 'Blanco',
-        black: 'Negro',
-        silver: 'Plateado',
-        blue: 'Azul',
-        red: 'Rojo',
-        green: 'Verde Quantum'
-    };
     const accessoriesTotal = customizerState.accessories.reduce((sum, acc) => sum + accessoryPrices[acc], 0);
     const totalPrice = vehicle.basePrice + accessoriesTotal;
-    if ('vibrate' in navigator) navigator.vibrate([100, 50, 100, 50, 100]);
+    if ('vibrate' in navigator) navigator.vibrate([100, 50, 100]);
     const message = `
 🚗 COTIZACIÓN QUANTUM MOTORS
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📋 Modelo: ${vehicle.name}
-🎨 Color: ${colorNames[customizerState.color]}
+━━━━━━━━━━━━━━━━━━━━
+📋 ${vehicle.name}
+🏷️ ${vehicle.category}
 
 ✨ Accesorios:
 ${accessories}
 
 💰 RESUMEN
+Base: Bs ${vehicle.basePrice.toLocaleString('es-BO')}
+Extras: Bs ${accessoriesTotal.toLocaleString('es-BO')}
 ━━━━━━━━━━━━━━━━━━━━
-Base:       Bs ${vehicle.basePrice.toLocaleString('es-BO')}
-Accesorios: Bs ${accessoriesTotal.toLocaleString('es-BO')}
-━━━━━━━━━━━━━━━━━━━━
-TOTAL:      Bs ${totalPrice.toLocaleString('es-BO')}
+TOTAL: Bs ${totalPrice.toLocaleString('es-BO')}
 
 ¡Gracias por tu interés!
     `;
@@ -391,8 +370,7 @@ function initAnimations() {
             }
         });
     }, observerOptions);
-    const animatedElements = document.querySelectorAll('.vehicle-card, .timeline-item');
-    animatedElements.forEach(el => {
+    document.querySelectorAll('.vehicle-card, .timeline-item').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'all 0.6s ease-out';
@@ -400,16 +378,257 @@ function initAnimations() {
     });
 }
 
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+console.log('💚 Quantum Motors - Actualizado 2025');
+console.log('📍 E4: Bs 80,100 | Nexus: Bs 137,300 | Kaiyi: Bs 202,000');
+
+// ============================================
+// TEST DRIVE FUNCTIONALITY
+// ============================================
+
+let currentTestDriveType = '';
+
+function openTestDriveForm(type) {
+    currentTestDriveType = type;
+    const modal = document.getElementById('testdriveModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    
+    const titles = {
+        physical: 'Reserva tu Test Drive Físico',
+        vr: 'Reserva tu Experiencia VR',
+        ar: 'Agenda tu Sesión AR'
+    };
+    
+    const subtitles = {
+        physical: 'Conduce un vehículo real en las calles de La Paz',
+        vr: 'Experimenta la simulación 3D en realidad virtual',
+        ar: 'Explora el vehículo en realidad aumentada'
+    };
+    
+    modalTitle.textContent = titles[type];
+    modalSubtitle.textContent = subtitles[type];
+    document.getElementById('testdriveType').value = type;
+    
+    // Set min date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('preferredDate').setAttribute('min', today);
+    
+    modal.classList.add('active');
+    
+    if ('vibrate' in navigator) {
+        navigator.vibrate(50);
+    }
+}
+
+function closeTestDriveForm() {
+    const modal = document.getElementById('testdriveModal');
+    modal.classList.remove('active');
+}
+
+function submitTestDrive(event) {
+    event.preventDefault();
+    
+    if ('vibrate' in navigator) {
+        navigator.vibrate([100, 50, 100]);
+    }
+    
+    // Get form data
+    const formData = {
+        type: document.getElementById('testdriveType').value,
+        name: document.getElementById('fullName').value,
+        ci: document.getElementById('ci').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        model: document.getElementById('vehicleModel').value,
+        date: document.getElementById('preferredDate').value,
+        time: document.getElementById('preferredTime').value,
+        license: document.querySelector('input[name="license"]:checked').value,
+        comments: document.getElementById('comments').value
+    };
+    
+    // Generate ticket code
+    const ticketCode = generateTicketCode();
+    
+    // Store reservation (in real app, send to server)
+    const reservation = {
+        ...formData,
+        ticketCode: ticketCode,
+        timestamp: new Date().toISOString()
+    };
+    
+    // Close form modal
+    closeTestDriveForm();
+    
+    // Show QR ticket
+    setTimeout(() => {
+        displayQRTicket(reservation);
+    }, 300);
+}
+
+function generateTicketCode() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let code = 'QM-';
+    for (let i = 0; i < 8; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+}
+
+function displayQRTicket(reservation) {
+    const qrModal = document.getElementById('qrModal');
+    
+    // Update ticket details
+    const typeLabels = {
+        physical: 'Test Drive Físico',
+        vr: 'Test Drive VR',
+        ar: 'Experiencia AR'
+    };
+    
+    const modelLabels = {
+        e4: 'Quantum E4',
+        nexus: 'Quantum Nexus',
+        kaiyi: 'Kaiyi Platinum',
+        todos: 'Todos los modelos'
+    };
+    
+    document.getElementById('ticketType').textContent = typeLabels[reservation.type];
+    document.getElementById('ticketName').textContent = reservation.name;
+    document.getElementById('ticketCI').textContent = reservation.ci;
+    document.getElementById('ticketModel').textContent = modelLabels[reservation.model];
+    document.getElementById('ticketDate').textContent = formatDate(reservation.date);
+    document.getElementById('ticketTime').textContent = reservation.time;
+    document.getElementById('ticketCode').textContent = reservation.ticketCode;
+    
+    // Generate QR Code
+    const qrContainer = document.getElementById('qrcode');
+    qrContainer.innerHTML = ''; // Clear previous
+    
+    // QR Data string
+    const qrData = `QUANTUM-TESTDRIVE
+Código: ${reservation.ticketCode}
+Nombre: ${reservation.name}
+CI: ${reservation.ci}
+Modelo: ${modelLabels[reservation.model]}
+Fecha: ${formatDate(reservation.date)}
+Hora: ${reservation.time}
+Tipo: ${typeLabels[reservation.type]}`;
+    
+    // Generate QR using a simple method (in production, use a QR library)
+    generateQRCode(qrContainer, qrData);
+    
+    // Show modal
+    qrModal.classList.add('active');
+    
+    // Store in localStorage for later retrieval
+    localStorage.setItem('lastTestDrive', JSON.stringify(reservation));
+}
+
+function generateQRCode(container, data) {
+    // Simple QR code placeholder (in production, use qrcode.js or similar)
+    const qrSize = 250;
+    const qr = document.createElement('div');
+    qr.style.width = qrSize + 'px';
+    qr.style.height = qrSize + 'px';
+    qr.style.background = 'white';
+    qr.style.border = '2px solid #e5e7eb';
+    qr.style.borderRadius = '12px';
+    qr.style.display = 'flex';
+    qr.style.alignItems = 'center';
+    qr.style.justifyContent = 'center';
+    qr.style.flexDirection = 'column';
+    qr.style.padding = '1rem';
+    qr.style.textAlign = 'center';
+    
+    // In production, replace this with actual QR generation
+    qr.innerHTML = `
+        <svg width="180" height="180" viewBox="0 0 180 180">
+            <rect width="180" height="180" fill="white"/>
+            <rect x="10" y="10" width="60" height="60" fill="black"/>
+            <rect x="110" y="10" width="60" height="60" fill="black"/>
+            <rect x="10" y="110" width="60" height="60" fill="black"/>
+            <rect x="30" y="30" width="20" height="20" fill="white"/>
+            <rect x="130" y="30" width="20" height="20" fill="white"/>
+            <rect x="30" y="130" width="20" height="20" fill="white"/>
+            <!-- More QR pattern here -->
+            <text x="90" y="95" text-anchor="middle" font-size="10" fill="black">QR Code</text>
+        </svg>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #6b7280;">Código: ${data.split('Código: ')[1]?.split('\n')[0]}</p>
+    `;
+    
+    container.appendChild(qr);
+}
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('es-BO', options);
+}
+
+function closeQRModal() {
+    const qrModal = document.getElementById('qrModal');
+    qrModal.classList.remove('active');
+}
+
+function downloadTicket() {
+    if ('vibrate' in navigator) {
+        navigator.vibrate(50);
+    }
+    
+    alert('💾 Funcionalidad de descarga en desarrollo.\n\nPor ahora, puedes hacer una captura de pantalla del ticket.');
+    
+    // In production, generate PDF or image
+}
+
+function shareTicket() {
+    const reservation = JSON.parse(localStorage.getItem('lastTestDrive'));
+    
+    if (!reservation) {
+        alert('No se encontró información de reserva');
+        return;
+    }
+    
+    const message = `🚗 *RESERVA TEST DRIVE QUANTUM*
+
+✅ Confirmado
+📋 Código: ${reservation.ticketCode}
+👤 Nombre: ${reservation.name}
+🚘 Modelo: ${document.getElementById('ticketModel').textContent}
+📅 Fecha: ${document.getElementById('ticketDate').textContent}
+🕐 Hora: ${reservation.time}
+
+📍 Showroom Quantum Motors, La Paz
+📞 +591 76488888
+
+¡Nos vemos pronto! 🔋`;
+    
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    if ('vibrate' in navigator) {
+        navigator.vibrate(50);
+    }
+}
+
+// Close modals on outside click
+document.addEventListener('click', function(event) {
+    const testdriveModal = document.getElementById('testdriveModal');
+    const qrModal = document.getElementById('qrModal');
+    
+    if (event.target === testdriveModal) {
+        closeTestDriveForm();
+    }
+    
+    if (event.target === qrModal) {
+        closeQRModal();
     }
 });
 
-console.log('💚 Quantum Motors - Sistema Interactivo Cargado');
-console.log('📍 Precios en Bolivianos (Bs)');
-console.log('⚡ Gasolina: Bs', FUEL_PRICE_BS, '/litro');
-console.log('🔌 Electricidad: Bs', ELECTRICITY_PRICE_BS, '/kWh');
+// Close modals on Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeTestDriveForm();
+        closeQRModal();
+    }
+});
+
+console.log('🎫 Test Drive module loaded - QR generation ready');
